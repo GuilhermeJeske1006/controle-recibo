@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Receipt\CheckoutController;
+use App\Http\Controllers\Receipt\DetailController;
+use App\Http\Controllers\Receipt\DownloadController;
 use App\Http\Controllers\ReceiptController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::get('/dashboard', function () {
@@ -31,6 +34,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/company/register', [CompanyController::class, 'create'])->name('company.create');
+    Route::post('/company/register', [CompanyController::class, 'store'])->name('company.store');
+    Route::get('/company/edit', [CompanyController::class, 'edit'])->name('company.edit');
+    Route::patch('/company/edit', [CompanyController::class, 'update'])->name('company.update');
+
+    Route::get('/receipt/detail/{receipt}', DetailController::class)->name('receipt.detail');
+    Route::get('/receipt/download', DownloadController::class)->name('receipt.download');
+
 });
 
 require __DIR__.'/auth.php';
