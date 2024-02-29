@@ -28,6 +28,7 @@ class ReceiptFactory extends Factory
             'cpf_sender' => fake()->numerify('###.###.###-##'),
             'phone_sender' => fake()->phoneNumber(),
             'type_payment' => fake()->numberBetween(0, 3),
+            'company_id' => fake()->numberBetween(1, 10),
         ];
     }
 }

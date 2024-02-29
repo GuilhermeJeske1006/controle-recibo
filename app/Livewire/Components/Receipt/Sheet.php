@@ -9,7 +9,9 @@ class Sheet extends Component
 {
     public $receipt;
 
-    public $bankTransfers;
+    public Receipt $data;
+
+    public $item;
 
     public function render()
     {
@@ -18,10 +20,15 @@ class Sheet extends Component
 
     public function mount()
     {
-        $this->receipt =
+        if ($this->item) {
+            $this->receipt = $this->item;
+
+        } else {
+            $this->receipt =
             Receipt::where('user_id', auth()->id())
-                ->with(['bankTransfers', 'checks', 'pixs'])
+                ->with(['bankTransfers', 'checks', 'pixs', 'company'])
                 ->latest()
                 ->first();
+        }
     }
 }

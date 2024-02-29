@@ -1,6 +1,7 @@
 <div>
 
-    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div  class="p-6 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <img src="{{ $receipt->company->photo }}" class="img-photo"  alt="">
         <a href="#">
             <h5 class="mb-6 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">Recibo de
                 Pagamento
@@ -67,7 +68,7 @@
 
     </div>
 
-    <a href="#"
+    <a href="{{ route('receipt.download', ['receipt' => $receipt ]) }}" target="_blank"
         class="m-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         Imprimir
         <svg class="rtl:rotate-180 w-4 h-5.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -90,3 +91,5 @@
 
 
 </div>
+
+

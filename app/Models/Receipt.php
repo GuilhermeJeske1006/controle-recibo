@@ -23,7 +23,7 @@ class Receipt extends Model
         'cpf_sender',
         'phone_sender',
         'type_payment',
-
+        'company_id',
     ];
 
     protected $casts = [
@@ -53,5 +53,10 @@ class Receipt extends Model
     public function bankTransfers(): HasMany
     {
         return $this->hasMany(BankTransfer::class);
+    }
+
+    public function company(): BelongsTo
+    {
+        return $this->belongsTo(Company::class);
     }
 }
