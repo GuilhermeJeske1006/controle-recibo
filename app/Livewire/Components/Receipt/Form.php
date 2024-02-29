@@ -164,6 +164,7 @@ class Form extends Component
                 'type_payment' => $this->typePayment(),
                 'value' => $this->value,
                 'user_id' => auth()->id(),
+                'company_id' => user()->company_id,
             ]);
 
             if ($this->pix) {
