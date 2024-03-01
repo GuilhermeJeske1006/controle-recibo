@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('checks', function (Blueprint $table) {
             $table->id();
-            $table->integer('n_check');
+            $table->string('n_check');
             $table->string('bank');
             $table->string('agency');
             $table->dateTime('date_check')->nullable();

@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Budget\CheckoutBudget;
+use App\Http\Controllers\Budget\DetailController as BudgetDetailController;
+use App\Http\Controllers\Budget\DownloadController as BudgetDownloadController;
+use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Receipt\CheckoutController;
@@ -42,6 +46,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/receipt/detail/{receipt}', DetailController::class)->name('receipt.detail');
     Route::get('/receipt/download', DownloadController::class)->name('receipt.download');
+
+    Route::get('/budget/register', [BudgetController::class, 'index'])->name('budget.register');
+    Route::get('/budget/checkout', CheckoutBudget::class)->name('budget.checkout');
+    Route::get('/budget/download', BudgetDownloadController::class)->name('budget.download');
+    Route::get('/budget/detail/{budget}', BudgetDetailController::class)->name('budget.detail');
 
 });
 

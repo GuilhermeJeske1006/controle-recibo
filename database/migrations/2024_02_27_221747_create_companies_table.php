@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->string('email')->nullable();
             $table->string('description')->nullable();
-
+            $table->string('instagram')->nullable();
+            $table->string('slogan')->nullable();
+            $table->string('marca_dagua')->nullable();
             $table->timestamps();
         });
 

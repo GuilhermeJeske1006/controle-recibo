@@ -51,6 +51,13 @@ class Form extends Component
     #[Validate('required')]
     public $state = '';
 
+    public $instagram;
+
+    public $slogan;
+
+    #[Validate('image|max:1024', 'mimes:jpg,jpeg,png')]
+    public $marca_dagua;
+
     public function updatedCep()
     {
         $response = Http::get("https://viacep.com.br/ws/{$this->cep}/json/");
@@ -68,6 +75,7 @@ class Form extends Component
         $this->validate();
 
         $this->photo = $this->photo->store('photos', 's3');
+        $this->marca_dagua = $this->marca_dagua->store('marca_dagua', 's3');
 
         try {
             $adress = Adress::create([
@@ -88,6 +96,10 @@ class Form extends Component
                 'description' => $this->description,
                 'photo' => $this->photo,
                 'adress_id' => $adress->id,
+                'instagram' => $this->instagram,
+                'slogan' => $this->slogan,
+                'marca_dagua' => $this->marca_dagua,
+
             ]);
 
             User::create([
@@ -99,10 +111,10 @@ class Form extends Component
                 'is_admin' => true,
             ]);
 
-            dd($company->id);
+            flash()->addSuccess('Empresa cadastrada com sucesso');
 
         } catch (\Exception $e) {
-            dd($e->getMessage());
+            flash()->addError($e->getMessage());
         }
 
     }

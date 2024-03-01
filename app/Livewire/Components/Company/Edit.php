@@ -48,10 +48,20 @@ class Edit extends Component
     #[Validate('required')]
     public $state = '';
 
+    public $instagram = '';
+
+    public $slogan = '';
+
+    #[Validate('image|max:1024', 'mimes:jpg,jpeg,png')]
+    public $marca_dagua;
+
     public function mount()
     {
         $this->company = Company::find(user()->company_id);
         $this->name_company = $this->company->name_company;
+        $this->instagram = $this->company->instagram;
+        $this->slogan = $this->company->slogan;
+        $this->marca_dagua = $this->company->marca_dagua;
         $this->cnpj = $this->company->cnpj;
         $this->email = $this->company->email;
         $this->phone_sender = $this->company->phone;
@@ -73,6 +83,12 @@ class Edit extends Component
             $this->photo = $this->company->photo;
         }
 
+        if ($this->marca_dagua != null) {
+            $this->marca_dagua = $this->marca_dagua->store('marca_dagua', 's3');
+        } else {
+            $this->marca_dagua = $this->company->marca_dagua;
+        }
+
         try {
 
             $this->company->adress->update([
@@ -92,6 +108,9 @@ class Edit extends Component
                 'phone' => $this->phone_sender,
                 'description' => $this->description,
                 'photo' => $this->photo,
+                'instagram' => $this->instagram,
+                'slogan' => $this->slogan,
+                'marca_dagua' => $this->marca_dagua,
                 'adress_id' => $this->company->adress_id,
             ]);
 

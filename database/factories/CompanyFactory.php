@@ -25,6 +25,9 @@ class CompanyFactory extends Factory
             'email' => fake()->email(),
             'description' => fake()->text(),
             'adress_id' => Adress::factory(),
+            'instagram' => fake()->userName(),
+            'slogan' => fake()->text(),
+            'marca_dagua' => fake()->imageUrl(),
         ];
     }
 }

@@ -195,11 +195,12 @@ class Form extends Component
                     'receipt_id' => $receipt->id,
                 ]);
             }
+            flash()->addSuccess('Recibo criado com sucesso!');
 
             return redirect()->route('receipt.checkout');
 
         } catch (\Exception $e) {
-            dd($e->getMessage());
+            flash()->addError($e->getMessage());
         }
     }
 }
