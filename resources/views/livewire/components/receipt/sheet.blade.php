@@ -10,7 +10,7 @@
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Recebi(emos) de <b>{{ $receipt->payer }} </b> -
             CPF/CNPJ
             nº <b>{{ formatCpfCnpj($receipt->cpf_payer) }} </b> , a importância de <b>R$
-                {{ formatValue($receipt->value) }}
+                {{ formatValue($receipt->value) }} ({{ formatExtension($receipt->value) }})
             </b> referente à <b>{{ $receipt->referent }} </b>.
 
             Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos, dando plena, rasa e
@@ -54,14 +54,14 @@
 
         <div style="border-top: 1px solid black; width: 30%" class="text-center m-auto"></div>
 
-        <p class="font-normal text-gray-700 dark:text-gray-400  py-1  text-center  ">
+        <p class="font-normal text-gray-700 dark:text-gray-400  pt-1  text-center  ">
             {{ $receipt->sender }}
         </p>
-        <p class="font-normal text-gray-700 dark:text-gray-400  py-1  text-center  ">
+        <p class="font-normal text-gray-700 dark:text-gray-400  text-center  ">
             {{ formatCpfCnpj($receipt->cpf_sender) }}
         </p>
         @if ($receipt->phone_sender)
-            <p class="font-normal text-gray-700 dark:text-gray-400  py-1  text-center  ">
+            <p class="font-normal text-gray-700 dark:text-gray-400  text-center  ">
                 {{ formatPhone($receipt->phone_sender) }}
             </p>
         @endif

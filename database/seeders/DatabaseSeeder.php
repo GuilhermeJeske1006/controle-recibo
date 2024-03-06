@@ -4,8 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Company;
-use App\Models\Receipt;
+use App\Models\{Budget, Company, Receipt};
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,9 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Company::factory(50)->create();
-        \App\Models\User::factory(0)->create();
+        Company::factory(20)->create();
+        \App\Models\User::factory(20)->create();
         Receipt::factory(500)->create();
+        Budget::factory(200)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

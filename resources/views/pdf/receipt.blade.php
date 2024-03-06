@@ -15,7 +15,7 @@
     <div>
 
         <div  class="p-6 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            {{-- <img src="{{ $receipt->company->photo }}" class="img-photo"  alt=""> --}}
+            {{-- <img src="{{ $receipt->company->photo }}"  style="max-width: 5%"  alt=""> --}}
             <a href="#">
                 <h5 class="mb-6 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">Recibo de
                     Pagamento
@@ -23,8 +23,8 @@
             </a>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Recebi(emos) de <b>{{ $receipt->payer }} </b> -
                 CPF/CNPJ
-                nº <b>{{ formatCpfCnpj($receipt->cpf_payer) }} </b> , a importância de <b>R$
-                    {{ formatValue($receipt->value) }}
+                nº <b>{{ formatCpfCnpj($receipt->cpf_payer) }}</b>, a importância de <b>R$
+                    {{ formatValue($receipt->value) }} ({{ formatExtension($receipt->value) }})
                 </b> referente à <b>{{ $receipt->referent }} </b>.
     
                 Para maior clareza firmo(amos) o presente recibo para que produza os seus efeitos, dando plena, rasa e

@@ -17,6 +17,9 @@ class Company extends Model
         'email',
         'description',
         'adress_id',
+        'instagram',
+        'slogan',
+        'marca_dagua',
     ];
 
     public function adress()
@@ -27,5 +30,15 @@ class Company extends Model
     public function user()
     {
         return $this->hasMany(User::class);
+    }
+
+    public function receipt()
+    {
+        return $this->hasMany(Receipt::class);
+    }
+
+    public function budget()
+    {
+        return $this->hasMany(Budget::class);
     }
 }

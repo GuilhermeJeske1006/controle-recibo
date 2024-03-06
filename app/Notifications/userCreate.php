@@ -40,7 +40,7 @@ class userCreate extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage())
-            ->line('Olá '.$this->user->name.' Seja muito bem vindo ao sistema.')
+            ->line('Olá ' . $this->user->name . ' Seja muito bem vindo ao sistema.')
             ->action('Acessar o sistema', url('/'))
             ->line('Obrigado por usar nossa aplicação!');
 

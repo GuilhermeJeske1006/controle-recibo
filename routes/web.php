@@ -1,11 +1,8 @@
 <?php
 
-use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Receipt\CheckoutController;
-use App\Http\Controllers\Receipt\DetailController;
-use App\Http\Controllers\Receipt\DownloadController;
-use App\Http\Controllers\ReceiptController;
+use App\Http\Controllers\Budget\{CheckoutBudget, DetailController as BudgetDetailController, DownloadController as BudgetDownloadController};
+use App\Http\Controllers\Receipt\{CheckoutController, DetailController, DownloadController};
+use App\Http\Controllers\{BudgetController, CompanyController, ProfileController, ReceiptController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +40,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/receipt/detail/{receipt}', DetailController::class)->name('receipt.detail');
     Route::get('/receipt/download', DownloadController::class)->name('receipt.download');
 
+    Route::get('/budget/register', [BudgetController::class, 'index'])->name('budget.register');
+    Route::get('/budget/checkout', CheckoutBudget::class)->name('budget.checkout');
+    Route::get('/budget/download', BudgetDownloadController::class)->name('budget.download');
+    Route::get('/budget/detail/{budget}', BudgetDetailController::class)->name('budget.detail');
+
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

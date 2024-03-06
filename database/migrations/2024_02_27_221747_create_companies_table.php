@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class () extends Migration {
     /**
      * Run the migrations.
      */
@@ -19,7 +18,9 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->string('email')->nullable();
             $table->string('description')->nullable();
-
+            $table->string('instagram')->nullable();
+            $table->string('slogan')->nullable();
+            $table->string('marca_dagua')->nullable();
             $table->timestamps();
         });
 

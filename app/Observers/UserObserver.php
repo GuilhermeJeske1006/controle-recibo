@@ -12,6 +12,6 @@ class UserObserver
      */
     public function created(User $user): void
     {
-        sendEmailCreateUser::dispatch($user);
+        // sendEmailCreateUser::dispatch($user);
     }
 }

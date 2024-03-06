@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "ext-gd": "*",
+        "alaminfirdows/laravel-editorjs": "^2.0",
         "barryvdh/laravel-dompdf": "^2.0",
         "guzzlehttp/guzzle": "^7.8",
         "laravel/breeze": "^1.28",
@@ -18,7 +20,9 @@
         "predis/predis": "^2.2"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.10",
         "fakerphp/faker": "^1.9.1",
+        "larastan/larastan": "*",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "lucascudo/laravel-pt-br-localization": "^2.1",

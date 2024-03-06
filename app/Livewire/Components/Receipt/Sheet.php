@@ -3,6 +3,7 @@
 namespace App\Livewire\Components\Receipt;
 
 use App\Models\Receipt;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 
 class Sheet extends Component
@@ -24,11 +25,13 @@ class Sheet extends Component
             $this->receipt = $this->item;
 
         } else {
-            $this->receipt =
-            Receipt::where('user_id', auth()->id())
+            $this->receipt = Receipt::where('user_id', auth()->id())
                 ->with(['bankTransfers', 'checks', 'pixs', 'company'])
                 ->latest()
                 ->first();
+
+            $this->receipt->company->photo = Storage::url($this->receipt->company->photo);
+
         }
     }
 }
