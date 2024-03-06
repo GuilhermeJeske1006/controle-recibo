@@ -4,9 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Budget;
-use App\Models\Company;
-use App\Models\Receipt;
+use App\Models\{Budget, Company, Receipt};
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

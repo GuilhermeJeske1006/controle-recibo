@@ -19,15 +19,15 @@ class CompanyFactory extends Factory
     {
         return [
             'name_company' => fake()->name(),
-            'cnpj' => fake()->numerify('##.###.###/####-##'),
-            'phone' => fake()->phoneNumber(),
-            'photo' => fake()->imageUrl(),
-            'email' => fake()->email(),
-            'description' => fake()->text(),
-            'adress_id' => Adress::factory(),
-            'instagram' => fake()->userName(),
-            'slogan' => fake()->text(),
-            'marca_dagua' => fake()->imageUrl(),
+            'cnpj'         => fake()->numerify('##.###.###/####-##'),
+            'phone'        => fake()->phoneNumber(),
+            'photo'        => fake()->imageUrl(),
+            'email'        => fake()->email(),
+            'description'  => fake()->text(),
+            'adress_id'    => Adress::factory(),
+            'instagram'    => fake()->userName(),
+            'slogan'       => fake()->text(),
+            'marca_dagua'  => fake()->imageUrl(),
         ];
     }
 }

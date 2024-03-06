@@ -17,16 +17,16 @@ class BudgetFactory extends Factory
     public function definition(): array
     {
         return [
-            'company_id' => fake()->numberBetween(1, 10),
-            'cnpj_client' => fake()->numerify('##.###.###/####-##'),
-            'client' => fake()->name(),
-            'date_budget' => fake()->date(),
-            'description' => fake()->randomHtml(),
+            'company_id'   => fake()->numberBetween(1, 10),
+            'cnpj_client'  => fake()->numerify('##.###.###/####-##'),
+            'client'       => fake()->name(),
+            'date_budget'  => fake()->date(),
+            'description'  => fake()->randomHtml(),
             'email_client' => fake()->email(),
             'phone_client' => fake()->phoneNumber(),
-            'status' => 'open',
+            'status'       => 'open',
             'value_budget' => fake()->randomFloat(2, 100, 1000),
-            'reference' => fake()->text(),
+            'reference'    => fake()->text(),
         ];
     }
 }

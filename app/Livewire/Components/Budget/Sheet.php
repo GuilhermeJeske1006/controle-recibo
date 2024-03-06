@@ -23,7 +23,7 @@ class Sheet extends Component
                     ->latest()
                     ->first();
 
-                $this->budget->company->photo = Storage::url($this->budget->company->photo);
+                $this->budget->company->photo       = Storage::url($this->budget->company->photo);
                 $this->budget->company->marca_dagua = Storage::url($this->budget->company->marca_dagua);
 
             }

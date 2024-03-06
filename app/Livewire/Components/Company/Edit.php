@@ -4,8 +4,7 @@ namespace App\Livewire\Components\Company;
 
 use App\Models\Company;
 use Livewire\Attributes\Validate;
-use Livewire\Component;
-use Livewire\WithFileUploads;
+use Livewire\{Component, WithFileUploads};
 
 class Edit extends Component
 {
@@ -57,22 +56,22 @@ class Edit extends Component
 
     public function mount()
     {
-        $this->company = Company::find(user()->company_id);
+        $this->company      = Company::find(user()->company_id);
         $this->name_company = $this->company->name_company;
-        $this->instagram = $this->company->instagram;
-        $this->slogan = $this->company->slogan;
-        $this->marca_dagua = $this->company->marca_dagua;
-        $this->cnpj = $this->company->cnpj;
-        $this->email = $this->company->email;
+        $this->instagram    = $this->company->instagram;
+        $this->slogan       = $this->company->slogan;
+        $this->marca_dagua  = $this->company->marca_dagua;
+        $this->cnpj         = $this->company->cnpj;
+        $this->email        = $this->company->email;
         $this->phone_sender = $this->company->phone;
-        $this->description = $this->company->description;
-        $this->street = $this->company->adress->street;
-        $this->number = $this->company->adress->number;
-        $this->complement = $this->company->adress->complement;
-        $this->cep = $this->company->adress->cep;
+        $this->description  = $this->company->description;
+        $this->street       = $this->company->adress->street;
+        $this->number       = $this->company->adress->number;
+        $this->complement   = $this->company->adress->complement;
+        $this->cep          = $this->company->adress->cep;
         $this->neighborhood = $this->company->adress->neighborhood;
-        $this->city = $this->company->adress->city;
-        $this->state = $this->company->adress->state;
+        $this->city         = $this->company->adress->city;
+        $this->state        = $this->company->adress->state;
     }
 
     public function edit()
@@ -92,26 +91,26 @@ class Edit extends Component
         try {
 
             $this->company->adress->update([
-                'street' => $this->street,
-                'number' => $this->number,
-                'complement' => $this->complement,
-                'cep' => $this->cep,
+                'street'       => $this->street,
+                'number'       => $this->number,
+                'complement'   => $this->complement,
+                'cep'          => $this->cep,
                 'neighborhood' => $this->neighborhood,
-                'city' => $this->city,
-                'state' => $this->state,
+                'city'         => $this->city,
+                'state'        => $this->state,
             ]);
 
             $company = $this->company->update([
                 'name_company' => $this->name_company,
-                'cnpj' => $this->cnpj,
-                'email' => $this->email,
-                'phone' => $this->phone_sender,
-                'description' => $this->description,
-                'photo' => $this->photo,
-                'instagram' => $this->instagram,
-                'slogan' => $this->slogan,
-                'marca_dagua' => $this->marca_dagua,
-                'adress_id' => $this->company->adress_id,
+                'cnpj'         => $this->cnpj,
+                'email'        => $this->email,
+                'phone'        => $this->phone_sender,
+                'description'  => $this->description,
+                'photo'        => $this->photo,
+                'instagram'    => $this->instagram,
+                'slogan'       => $this->slogan,
+                'marca_dagua'  => $this->marca_dagua,
+                'adress_id'    => $this->company->adress_id,
             ]);
 
             flash()->addSuccess('Empresa editada com sucesso!');

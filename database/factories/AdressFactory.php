@@ -17,12 +17,12 @@ class AdressFactory extends Factory
     public function definition(): array
     {
         return [
-            'city' => fake()->city(),
-            'state' => fake()->streetAddress(),
-            'street' => fake()->streetAddress(),
-            'number' => fake()->numberBetween(1, 1000),
-            'complement' => fake()->address(),
-            'cep' => fake()->numerify('#####-###'),
+            'city'         => fake()->city(),
+            'state'        => fake()->streetAddress(),
+            'street'       => fake()->streetAddress(),
+            'number'       => fake()->numberBetween(1, 1000),
+            'complement'   => fake()->address(),
+            'cep'          => fake()->numerify('#####-###'),
             'neighborhood' => fake()->streetName(),
         ];
     }

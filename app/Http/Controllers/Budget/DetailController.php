@@ -14,13 +14,12 @@ class DetailController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $budget =
-        Budget::find($request->budget)
+        $budget = Budget::find($request->budget)
             ->load([
                 'company',
             ]);
 
-        $budget->company->photo = Storage::url($budget->company->photo);
+        $budget->company->photo       = Storage::url($budget->company->photo);
         $budget->company->marca_dagua = Storage::url($budget->company->marca_dagua);
 
         return view('budget.details', compact('budget'));

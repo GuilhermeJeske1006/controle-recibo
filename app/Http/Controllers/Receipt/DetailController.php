@@ -14,8 +14,7 @@ class DetailController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $receipt =
-            Receipt::find($request->receipt)
+        $receipt = Receipt::find($request->receipt)
                 ->load([
                     'bankTransfers',
                     'checks',

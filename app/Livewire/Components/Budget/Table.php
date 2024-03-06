@@ -4,8 +4,7 @@ namespace App\Livewire\Components\Budget;
 
 use App\Models\Budget;
 use Livewire\Attributes\Computed;
-use Livewire\Component;
-use Livewire\WithPagination;
+use Livewire\{Component, WithPagination};
 
 class Table extends Component
 {
@@ -16,7 +15,7 @@ class Table extends Component
     #[Computed]
     public function budgets()
     {
-        if (! empty($this->search)) {
+        if (!empty($this->search)) {
             return $this->filter();
         } else {
             return Budget::where('company_id', user()->company_id)
@@ -28,9 +27,9 @@ class Table extends Component
     public function filter()
     {
         return Budget::where('company_id', user()->company_id)
-            ->where('client', 'like', '%'.$this->search.'%')
-            ->orWhere('cnpj_budget', 'like', '%'.$this->search.'%')
-            ->orWhere('value_budget', 'like', '%'.$this->search.'%')
+            ->where('client', 'like', '%' . $this->search . '%')
+            ->orWhere('cnpj_budget', 'like', '%' . $this->search . '%')
+            ->orWhere('value_budget', 'like', '%' . $this->search . '%')
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 

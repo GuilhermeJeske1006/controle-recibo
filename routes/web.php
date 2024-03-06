@@ -1,15 +1,8 @@
 <?php
 
-use App\Http\Controllers\Budget\CheckoutBudget;
-use App\Http\Controllers\Budget\DetailController as BudgetDetailController;
-use App\Http\Controllers\Budget\DownloadController as BudgetDownloadController;
-use App\Http\Controllers\BudgetController;
-use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Receipt\CheckoutController;
-use App\Http\Controllers\Receipt\DetailController;
-use App\Http\Controllers\Receipt\DownloadController;
-use App\Http\Controllers\ReceiptController;
+use App\Http\Controllers\Budget\{CheckoutBudget, DetailController as BudgetDetailController, DownloadController as BudgetDownloadController};
+use App\Http\Controllers\Receipt\{CheckoutController, DetailController, DownloadController};
+use App\Http\Controllers\{BudgetController, CompanyController, ProfileController, ReceiptController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,4 +47,4 @@ Route::middleware('auth')->group(function () {
 
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
