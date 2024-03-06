@@ -49,7 +49,7 @@
 
 
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 py-2  text-end  ">
-            Brusque, {{ formatDateString($budget->date_budget) }}
+            {{ $budget->company->adress->city }}, {{ formatDateString($budget->date_budget) }}
         </p>
         <br>
         <p class="mb-1 font-normal text-gray-700 dark:text-gray-400  text-end  ">
@@ -83,6 +83,7 @@
                 d="m16 10 3-3m0 0-3-3m3 3H5v3m3 4-3 3m0 0 3 3m-3-3h14v-3" />
         </svg>
     </a>
+
 
 
 </div>

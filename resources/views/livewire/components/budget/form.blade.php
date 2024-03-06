@@ -89,13 +89,14 @@
         @enderror
 
     </div>
-    <div class="relative z-0 w-full mb-5 group">
+    <div wire:ignore class="relative z-0 w-full mb-5 group">
         <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descrição do
             orçamento</label>
-        <textarea placeholder="Faça aqui a descrição dos items..." name="content" wire:model='description' id="editor"
+        <textarea placeholder="Faça aqui a descrição dos items..." name="content" wire:model.defer='description' id="editor"
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
 
     </div>
+    
 
     <button type="submit"
         class="text-white mt-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Salvar</button>
@@ -103,16 +104,29 @@
 
 
 @push('script')
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+
+<script>
+    window.onload = function() {
+        const editorElement = document.querySelector('#editor');
+        
+        if (editorElement) {
             ClassicEditor
-                .create(document.querySelector('#editor'))
+                .create(editorElement)
                 .then(editor => {
-                    console.log(editor, 'editor');
+                    editor.model.document.on('change:data', () => {
+                        @this.set('description', editor.getData());
+                    });
                 })
                 .catch(error => {
                     console.error(error);
                 });
-        });
-    </script>
+        } else {
+            console.error("Editor element not found.");
+        }
+    };
+</script>
+
+
+
 @endpush
+

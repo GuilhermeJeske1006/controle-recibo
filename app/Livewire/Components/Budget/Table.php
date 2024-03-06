@@ -39,6 +39,7 @@ class Table extends Component
     public function delete($id)
     {
         Budget::find($id)->delete();
+        flash()->addSuccess('Orçamento deletado com sucesso!');
     }
 
     public function render()
