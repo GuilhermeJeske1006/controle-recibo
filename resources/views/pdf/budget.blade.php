@@ -15,18 +15,16 @@
     <div>
 
         <div
-        @if (env('APP_ENV') == 'production')
             style=" 
             background-image: url({{ $budget->company->marca_dagua }});
             background-position: center;
             background-repeat: no-repeat;
-    "
+    
         @endif 
             class=" p-20 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     
     
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8  mb-16">
-                @if (env('APP_ENV') == 'production')
                 <div>
                     <img class="h-auto  rounded-lg" style="max-width: 30%;"
                         src="{{ $budget->company->photo }}" alt="">
@@ -41,7 +39,6 @@
     
                     </p>
                 </div>
-                @endif
                 
     
             </div>
