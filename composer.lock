@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8111b277a8e7aa9f1b9bcad2e17faa77",
+    "content-hash": "5b065d7cd3c10dc8a1fafc26ab282de1",
     "packages": [
         {
             "name": "alaminfirdows/laravel-editorjs",

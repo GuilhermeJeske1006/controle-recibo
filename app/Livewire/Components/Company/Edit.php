@@ -60,7 +60,6 @@ class Edit extends Component
         $this->name_company = $this->company->name_company;
         $this->instagram    = $this->company->instagram;
         $this->slogan       = $this->company->slogan;
-        $this->marca_dagua  = $this->company->marca_dagua;
         $this->cnpj         = $this->company->cnpj;
         $this->email        = $this->company->email;
         $this->phone_sender = $this->company->phone;
