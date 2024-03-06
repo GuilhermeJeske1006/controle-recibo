@@ -20,7 +20,6 @@ class Form extends Component
     #[Validate('email')]
     public $email;
 
-    #[Validate('required')]
     public $phone_sender;
 
     public $description;
