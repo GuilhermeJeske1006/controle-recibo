@@ -7,6 +7,8 @@
     <title>Orçamento</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.bunny.net">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -15,31 +17,35 @@
     <div>
 
         <div
-            style=" 
-            background-image: url({{ $budget->company->marca_dagua }});
-            background-position: center;
-            background-repeat: no-repeat;"
+       @env('production')
+           style=" 
+           background-image: url({{ $budget->company->marca_dagua }});
+           background-position: center;
+           background-repeat: no-repeat;"
+           
+       @endenv
+            class=" p-20 sheet">
     
-            class=" p-20 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     
-    
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8  mb-16">
+            <div class="flex flex-cols-2 md:flex-cols-3 gap-8  mb-16">
                 <div>
-                    <img class="h-auto  rounded-lg" style="max-width: 30%;"
-                        src="{{ $budget->company->photo }}" alt="">
+                    @env('production')
+                        <img class="h-auto  rounded-lg" style="max-width: 25%;"
+                            src="{{ $budget->company->photo }}" alt="">
+                        
+                    @endenv
                 </div>
                 <div></div>
     
                 <div class=" flex justify-end">
+                    @env('production')
                     <img class="h-auto rounded-lg" style="max-width: 15%; height: 70%;"
-                        src="assets/instagram.png" alt="">
+                    src="assets/instagram.png" alt="">                        
+                    @endenv                  
                     <p class="mb-3 flex items-center ml-3 font-bold text-gray-700 dark:text-gray-400">
-                        {{ '@' }}{{ $budget->company->instagram }}
-    
+                        {{ '@' }}{{ $budget->company->instagram }}    
                     </p>
                 </div>
-                
-    
             </div>
     
             <a href="#">
@@ -78,16 +84,9 @@
                 <p class="mb-1 font-normal text-gray-700 dark:text-gray-400  text-end  ">
                     {{ $budget->company->email }}
                 </p>
-            </div>
-            
+            </div> 
         </div>
-    
-    
-    
     </div>
-    
-    
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
 </body>

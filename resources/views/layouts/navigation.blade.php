@@ -105,6 +105,9 @@
             <x-responsive-nav-link :href="route('register.receipt')" :active="request()->routeIs('register.receipt')">
                 {{ __('Criar Recibo') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('budget.register')" :active="request()->routeIs('budget.register')">
+                {{ __('Criar Orçamento') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
