@@ -18,9 +18,8 @@
             style=" 
             background-image: url({{ $budget->company->marca_dagua }});
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat;"
     
-        @endif 
             class=" p-20 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     
     
