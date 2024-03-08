@@ -17,14 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {return view('index');})->name('home');
+Route::get('/', function () {return view('index');})->name('index');
 
 Route::get('/signature/register', SignatureRegisterController::class)->name('signature.register');
 
 Route::get('/subscribe', SubscribeController::class)->name('subscribe');
 
 Route::middleware(['auth', 'subscribed', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
+    Route::get('/dashboard', function () {return view('dashboard');})->name('home');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
