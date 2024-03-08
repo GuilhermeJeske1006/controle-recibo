@@ -1,5 +1,7 @@
 <div class="col-md-12">
-
+    <div wire:loading> 
+        Redirecionando...
+    </div>
     <div class="form-container">
         
         <form wire:submit="submit" id="privacyForm" data-toggle="validator" data-focus="false">
@@ -54,8 +56,8 @@
                 </div>
                 <div class="col-md">
                     <div class="form-group">
-                        <label class="form-label" for="pemail">Instagram (Opcional)</label>
-                        <input placeholder="ex: elon_musk, joao_123" type="text" wire:model='instagram' class="form-control form-register" id="floatingInputGrid">
+                        <label class="form-label" for="instagram">Instagram (Opcional)</label>
+                        <input placeholder="ex: elon_musk, joao_123" type="text" wire:model='instagram' class="form-control form-register" id="instagram">
                     </div>
                     <div class="help-block with-errors">
                         @error('instagram')
@@ -74,7 +76,7 @@
                     @enderror
                 </div>
             </div>
-            <div class="row g-2">
+            {{-- <div class="row g-2">
                 <div class="col-md">
                     <div class="form-group">
 
@@ -127,7 +129,7 @@
                    
                 </div>
                 
-            </div>
+            </div> --}}
 
             <div class="form-group">
                 <label class="form-label" for="description">Descrição da empresa (Opcional)</label>
@@ -291,7 +293,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 d-flex flex-row-reverse">
-            <div class="form-group col-3">
+            <div class="form-group col-md-3 col-12">
                 <div class="button-wrapper">
                     <button type="submit" class="btn-solid-reg page-scroll" >IR PARA O PAGAMENTO</button>
                 </div>
