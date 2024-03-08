@@ -24,7 +24,6 @@ class Form extends Component
 
     public $description;
 
-    #[Validate('image|max:1024', 'mimes:jpg,jpeg,png', 'required')]
     public $photo;
 
     #[Validate('required')]
@@ -50,7 +49,6 @@ class Form extends Component
 
     public $slogan;
 
-    #[Validate('image|max:1024', 'mimes:jpg,jpeg,png')]
     public $marca_dagua;
 
     #[Validate('required')]
@@ -80,7 +78,9 @@ class Form extends Component
     {
         $this->validate();
 
-        $this->photo = $this->photo->store('photos', 's3');
+        if($this->photo != null) {
+            $this->photo = $this->photo->store('photos', 's3');
+        }
 
         if($this->marca_dagua != null) {
             $this->marca_dagua = $this->marca_dagua->store('marca_dagua', 's3');
