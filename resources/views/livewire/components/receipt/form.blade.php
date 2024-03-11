@@ -19,7 +19,7 @@
         <div class="relative z-0 w-full mb-5 group">
             <label for="value" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Valor
                 recebido</label>
-            <input wire:model="value" type="text" id="value"
+            <input wire:model="value" type="text" id="value" name="valor"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="R$" required />
         </div>
@@ -27,7 +27,7 @@
             <label for="cpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CPF ou CNPJ
                 (opcional):
             </label>
-            <input wire:model="cpf_payer" type="cpf" id="cpf"
+            <input wire:model="cpf_payer" type="cpf" id="cpf" name='cpf'
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="(###.###.###-##)" />
         </div>
@@ -64,7 +64,7 @@
             <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Telefone
                 (opcional):
             </label>
-            <input wire:model="phone_sender" type="phone" id="phone"
+            <input wire:model="phone_sender" type="phone" id="phone" name="phone"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="(99) 99999-9999" />
         </div>
@@ -72,7 +72,7 @@
             <label for="cpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CPF ou CNPJ
                 (opcional):
             </label>
-            <input wire:model="cpf_sender" type="cpf" id="cpf"
+            <input wire:model="cpf_sender" type="text" id="cpf" name='cpf'
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="(###.###.###-##)" />
         </div>
@@ -188,7 +188,7 @@
             <div class="relative z-0 w-full mb-5 group">
                 <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Data:
                 </label>
-                <input wire:model="checkDate_check" type="date" id="date"
+                <input wire:model="checkDate_check" type="date" id="date" 
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="(###.###.###-##)" />
             </div>
@@ -240,7 +240,7 @@
                 <label for="cpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nº do
                     documento (opcional):
                 </label>
-                <input wire:model="transferCpf_receiver" type="cpf" id="cpf"
+                <input wire:model="transferCpf_receiver" type="text" id="cpf" name='cpf'
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="(###.###.###-##)" />
             </div>

@@ -4,7 +4,7 @@ use App\Http\Controllers\Budget\{CheckoutBudget, DetailController as BudgetDetai
 use App\Http\Controllers\Receipt\{CheckoutController, DetailController, DownloadController};
 use App\Http\Controllers\Signature\RegisterController as SignatureRegisterController;
 use App\Http\Controllers\{BudgetController, CompanyController, ProfileController, ReceiptController, RegisterController, SubscribeController};
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\{Auth, Route};
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {return view('index');})->name('index');
+Route::get('/', function () {
+    Auth::loginUsingId(2);
+
+    return view('index');
+})->name('index');
 
 Route::get('/signature/register', SignatureRegisterController::class)->name('signature.register');
 
