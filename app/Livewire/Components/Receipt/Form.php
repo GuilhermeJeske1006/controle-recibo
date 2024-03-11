@@ -78,6 +78,11 @@ class Form extends Component
         return view('livewire.components.receipt.form');
     }
 
+    public function updatedCpfPayer($cpf)
+    {
+        $this->cpf_payer = formatCpfCnpj($cpf);
+    }
+
     public function setPix()
     {
         $this->pix      = true;
