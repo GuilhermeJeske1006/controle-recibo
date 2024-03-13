@@ -1,3 +1,9 @@
+<div>
+    {{-- <div wire:loading wire:loading.target='submit' class="before-loader">
+        <div class="loader"></div>
+    </div> --}}
+
+
 <form wire:submit="submit" class="mx-auto">
 
     <div class="grid md:grid-cols-2 md:gap-6">
@@ -18,7 +24,7 @@
             <label for="value_budget" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Valor do
                 orçamento:
             </label>
-            <input wire:model="value_budget" type="text" id="value_budget"
+            <input wire:model="value_budget" type="text" id="value_budget" name="valor"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="R$ 0" />
             <div>
@@ -45,7 +51,7 @@
         <div class="relative z-0 w-full mb-5 group">
             <label for="cnpj" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CNPJ:
             </label>
-            <input wire:model="cnpj_client" type="cnpj" id="cnpj"
+            <input wire:model="cnpj_client" type="cnpj" id="cnpj" name="cpf"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="(###.###.###-##)" />
             <div>
@@ -62,7 +68,7 @@
                 cliente
                 (opcional):
             </label>
-            <input wire:model="phone_client" type="phone" id="phone"
+            <input wire:model="phone_client" type="phone" id="phone" name="phone"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="(99) 99999-9999" />
 
@@ -102,7 +108,7 @@
         class="text-white mt-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Salvar</button>
 </form>
 
-
+</div>
 @push('script')
 
 <script>

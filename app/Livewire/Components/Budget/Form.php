@@ -49,6 +49,7 @@ class Form extends Component
             return redirect()->route('budget.checkout');
 
         } catch (\Throwable $th) {
+            dd($th->getMessage());
             flash()->addError('Erro ao cadastrar orçamento!');
         }
 

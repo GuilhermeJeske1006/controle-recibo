@@ -71,7 +71,7 @@ class Form extends Component
     public string $type_payment = '';
 
     #[Validate('required')]
-    public float $value;
+    public $value;
 
     public function render()
     {
