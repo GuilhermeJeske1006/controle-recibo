@@ -1,7 +1,12 @@
 <div class="col-md-12">
-    <div wire:loading> 
-        Redirecionando...
-    </div>
+    <div wire:loading wire:loading.target='submit'> 
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>        </div>
     <div class="form-container">
         
         <form wire:submit="submit" id="privacyForm" data-toggle="validator" data-focus="false">
@@ -32,7 +37,7 @@
                 <div class="col-md">
                     <div class="form-group">
                         <label class="form-label" for="cnpj">CNPJ</label>
-                        <input placeholder="(##.###.###/####-##)" type="text" wire:model='cnpj' class="form-control form-register" id="cnpj" required>
+                        <input placeholder="(##.###.###/####-##)" type="text" wire:model='cnpj' name="cpf" class="form-control form-register" id="cnpj" required>
                     </div>
                     <div class="help-block with-errors">
                         @error('cnpj')
@@ -45,7 +50,7 @@
                 <div class="col-md">
                     <div class="form-group">
                         <label class="form-label" for="phone_sender">Telefone (Opcional)</label>
-                        <input placeholder="(99) 9 9999-9999" type="phone" wire:model='phone_sender' class="form-control form-register"
+                        <input placeholder="(99) 9 9999-9999" name="phone" type="phone" wire:model='phone_sender' class="form-control form-register"
                             id="floatingInputGrid">
                     </div>
                     <div class="help-block with-errors">
@@ -268,7 +273,7 @@
                 <div class="col-md">
                     <div class="form-group">
                         <label class="form-label" for="password">Senha</label>
-                        <input placeholder="Informe a sua senha" required type="password" wire:model.live='password' class="form-control form-register" id="password">
+                        <input placeholder="Informe a sua senha" required type="password" wire:model='password' class="form-control form-register" id="password">
                     </div>
                     <div class="help-block with-errors">
                         @error('password')
@@ -279,7 +284,7 @@
                 <div class="col-md">
                     <div class="form-group">
                         <label class="form-label" for="confirm_password">Confirmar senha</label>
-                        <input placeholder="Confirme a sua senha" required type="password" wire:model.live='confirm_password' class="form-control form-register"
+                        <input placeholder="Confirme a sua senha" required type="password" wire:model='confirm_password' class="form-control form-register"
                             id="confirm_password">
                     </div>
                     <div class="help-block with-errors">

@@ -71,10 +71,10 @@ themeToggleBtn.addEventListener('click', function() {
     
     function formatarValor(valor) {
         // Remove caracteres não numéricos
-        valor = valor.replace(/[^\d]/g, '');
+        // valor = valor.replace(/[^\d]/g, '');
     
-        // Formatar como valor monetário
-        valor = (parseFloat(valor) / 100).toFixed(2).replace('.', ',');
+        // // Formatar como valor monetário
+        // valor = (parseFloat(valor) / 100).toFixed(2).replace('.', ',');
     
         return valor;
     }

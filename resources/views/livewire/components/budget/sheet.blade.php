@@ -7,7 +7,6 @@
 "
         class=" p-20 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8  mb-16">
             <div>
                 <img class="h-auto  rounded-lg" style="max-width: 30%;"
