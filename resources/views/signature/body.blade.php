@@ -64,17 +64,17 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="{{ route('index') }}">HOME <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="{{ route('index') }}">INICIAL <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#features">FEATURES</a>
+                        <a class="nav-link page-scroll" href="#features">CARACTERÍSTICAS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#details">DETAILS</a>
+                        <a class="nav-link page-scroll" href="#details">DETALHES</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#pricing">PRICING</a>
+                        <a class="nav-link page-scroll" href="#pricing">PRECIFICAÇÃO</a>
                     </li>
                 </ul>
                 <span class="nav-item">
@@ -96,36 +96,33 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col first">
-                        <h4>About Tivo</h4>
-                        <p class="p-small">We're passionate about designing and developing one of the best marketing apps in the market</p>
+                        <h4>Sobre a GJ desenvolvimento</h4>
+                        <p class="p-small">A Gj desenvolvimento é uma empresa focada em entregar o melhor e mais tecnológico serviço para impulsionar a sua marca</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col middle">
-                        <h4>Important Links</h4>
+                        <h4>Links Importantes</h4>
                         <ul class="list-unstyled li-space-lg p-small">
+                            
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white" href="#your-link">startupguide.com</a></div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
+                                <div class="media-body">Leia os nossos <a class="white" href="terms-conditions.html">Termos & Condições</a></div>
                             </li>
                         </ul>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col last">
-                        <h4>Contact</h4>
+                        <h4>Contato</h4>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
+                                <div class="media-body">720 Silvério Régis, Lageado Baixo, Guabiruba 88360-000, BRA</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:contact@tivo.com">contact@tivo.com</a> <i class="fas fa-globe"></i><a class="white" href="#your-link">www.tivo.com</a></div>
+                                <div class="media-body"><a class="white" href="contatogj@gmail.com">contatogj@gmail.com</a> <i class="fas fa-globe"> </i><a class="white" href="https://gjdesenvolvimento.com.br/">gjdesenvolvimento.com.br</a></div>
                             </li>
                         </ul>
                     </div> 
@@ -141,8 +138,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Template by Inovatik</a><br>
-                        Distributed By <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    <p class="p-small">Copyright © 2024 <a href="https://gjdesenvolvimento.com.br/">GJ DESENVOLVIMENTO</a><br>
                     </p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->

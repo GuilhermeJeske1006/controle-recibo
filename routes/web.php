@@ -1,9 +1,10 @@
 <?php
 
 use App\Http\Controllers\Budget\{CheckoutBudget, DetailController as BudgetDetailController, DownloadController as BudgetDownloadController};
+use App\Http\Controllers\Newsletter\SendController;
 use App\Http\Controllers\Receipt\{CheckoutController, DetailController, DownloadController};
 use App\Http\Controllers\Signature\RegisterController as SignatureRegisterController;
-use App\Http\Controllers\{BudgetController, CompanyController, ProfileController, ReceiptController, RegisterController, SubscribeController};
+use App\Http\Controllers\{BudgetController, CompanyController, ProfileController, ReceiptController, SubscribeController};
 use Illuminate\Support\Facades\{Auth, Route};
 
 /*
@@ -26,6 +27,7 @@ Route::get('/', function () {
 Route::get('/signature/register', SignatureRegisterController::class)->name('signature.register');
 
 Route::get('/subscribe', SubscribeController::class)->name('subscribe');
+Route::post('/newsletter/register', SendController::class)->name('newsletter.register');
 
 Route::middleware(['auth', 'subscribed', 'verified'])->group(function () {
     Route::get('/dashboard', function () {return view('dashboard');})->name('home');
