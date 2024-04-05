@@ -12,7 +12,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" >
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
 
         <div
@@ -25,29 +25,21 @@
        @endenv
             class=" p-20 sheet">
     
-    
-            <div class="flex flex-cols-2 md:flex-cols-3 gap-8  mb-16">
-                <div>
-                    @env('production')
-                        <img class="h-auto  rounded-lg" style="max-width: 25%;"
-                            src="{{ $budget->company->photo }}" alt="">
-                        
-                    @endenv
-                </div>
-                <div>
-                
-                </div>
-    
-                <div class=" flex justify-end">
-                    @env('production')
-                    <img class="h-auto rounded-lg" style="max-width: 15%; height: 70%;"
-                    src="assets/instagram.png" alt="">                        
-                    @endenv                  
-                    <p class="mb-3 flex items-center ml-3 font-bold text-gray-700 dark:text-gray-400">
-                        {{ '@' }}{{ $budget->company->instagram }}    
-                    </p>
-                </div>
+   
+        <div class="flex justify-between mb-16">
+            <div class=" font-normal text-gray-700 dark:text-gray-400 text-end" >
+                @env('production')
+                    <img class="h-auto rounded-lg" style="max-width: 5%;" src="{{ $budget->company->photo }}" alt="">
+                @endenv
             </div>
+
+            <div class=" font-bold text-gray-700 dark:text-gray-400 text-start"  style="position: absolute; top: 0;"  >
+                @env('production')
+                    <img class="h-auto rounded-lg " style="max-width: 5%;" src="assets/instagram.png" alt="">
+                 @endenv
+                    {{ '@' }}{{ $budget->company->instagram }}
+            </div>
+        </div>
     
             <a href="#">
                 <h5 class="mb-6 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">ORÇAMENTO
