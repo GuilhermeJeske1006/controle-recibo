@@ -27,6 +27,8 @@ class Form extends Component
 
     public $reference;
 
+    public $budgets;
+
     public function submit()
     {
         try {
@@ -53,6 +55,26 @@ class Form extends Component
             flash()->addError('Erro ao cadastrar orçamento!');
         }
 
+    }
+
+    public function mount()
+    {
+        $this->budgets = Budget::where('company_id', user()->company_id)
+            ->orderBy('id', 'desc')
+            ->limit(3)
+            ->get();
+    }
+
+    public function receive($budget)
+    {
+        $this->client       = $budget['client'];
+        $this->cnpj_budget  = $budget['cnpj_budget'];
+        $this->value_budget = $budget['value_budget'];
+        $this->date_budget  = $budget['date_budget'];
+        $this->email_client = $budget['email_client'];
+        $this->phone_client = $budget['phone_client'];
+        $this->description  = $budget['description'];
+        $this->reference    = $budget['reference'];
     }
 
     public function render()
