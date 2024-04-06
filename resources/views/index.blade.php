@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-5">
                         <div class="text-container">
-                            <h1>SaaS App HTML Landing Page</h1>
-                            <p class="p-large">Use Tivo to automate your marketing actions in order to reach a much larger audience</p>
+                            <h1>Recibos Sob Controle, Finanças no Lugar.</h1>
+                            <p class="p-large">Planeje, Acompanhe e Conquiste seus Objetivos Financeiros com Facilidade</p>
                             <a class="btn-solid-lg page-scroll" href="{{ route('signature.register') }}">CADASTRAR-ME</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
