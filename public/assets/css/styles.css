@@ -798,8 +798,8 @@ input[type='checkbox'] {
 .header h1 {
 	margin-bottom: 1rem;
 	color: #fff;
-	font-size: 2.5rem;
-	line-height: 3rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
 }
 
 .header .p-large {
@@ -1642,8 +1642,8 @@ a:hover.back-to-top {
 	}
 
 	.header h1 {
-		font-size: 3.5rem;
-		line-height: 4.125rem;
+		font-size: 2.5rem;
+		line-height: 3.125rem;
 	}
 
 	.header .btn-solid-lg {

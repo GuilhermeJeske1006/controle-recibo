@@ -7,8 +7,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-5">
                         <div class="text-container">
-                            <h1>SaaS App HTML Landing Page</h1>
-                            <p class="p-large">Use Tivo to automate your marketing actions in order to reach a much larger audience</p>
+                            <h1>Recibos Sob Controle, Finanças no Lugar.</h1>
+                            <p class="p-large">Planeje, Acompanhe e Conquiste seus Objetivos Financeiros com Facilidade</p>
                             <a class="btn-solid-lg page-scroll" href="{{ route('signature.register') }}">CADASTRAR-ME</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="above-heading">DESCRIPTION</div>
+                    <div class="above-heading">DESCRIÇÃO</div>
                     <h2 class="h2-heading">Marketing Automation Will Bring More Qualified Leads</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -89,7 +89,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="above-heading">FEATURES</div>
+                    <div class="above-heading">CARACTERISTICAS</div>
                     <h2 class="h2-heading">Marketing Automation</h2>
                     <p class="p-heading">Take your business strategy to the next level and automatize your marketing tasks to save time for product development. Tivo can provide results in less than 2 weeks</p>
                 </div> <!-- end of col -->
@@ -384,31 +384,7 @@
     <!-- end of details -->
 
 
-    <!-- Video -->
-    <div id="video" class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
 
-                    <!-- Video Preview -->
-                    <div class="image-container">
-                        <div class="video-wrapper">
-                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=fLCjQJCekTs" data-effect="fadeIn">
-                                <img class="img-fluid" src="{{ asset('assets/images/video-image.png') }}" alt="alternative">
-                                <span class="video-play-button">
-                                    <span></span>
-                                </span>
-                            </a>
-                        </div> <!-- end of video-wrapper -->
-                    </div> <!-- end of image-container -->
-                    <!-- end of video preview -->
-
-                    <div class="p-heading">What better way to show off Tivo marketing automation saas app than presenting you some great situations of each module and tool available to users in a video</div>        
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of video -->
 
 
     <!-- Pricing -->
@@ -416,8 +392,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="above-heading">PRICING</div>
-                    <h2 class="h2-heading">Pricing Options Table</h2>
+                    <div class="above-heading">PRECIFICAÇÃO</div>
+                    <h2 class="h2-heading">Tabela de Opções de Preços</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -448,7 +424,7 @@
                                 </li>
                             </ul>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
+                                <a class="btn-solid-reg page-scroll" href="sign-up.html">ME CADASTRAR</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -479,13 +455,13 @@
                                 </li>
                             </ul>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
+                                <a class="btn-solid-reg page-scroll" href="sign-up.html">ME CADASTRAR</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
                     <!-- end of card -->
 
-                    <!-- Card-->
+                    {{-- <!-- Card-->
                     <div class="card">
                         <!--<div class="label">
                             <p class="best-value">Best Value</p>
@@ -517,7 +493,7 @@
                             </div>
                         </div>
                     </div> <!-- end of card -->
-                    <!-- end of card -->
+                    <!-- end of card --> --}}
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -526,7 +502,7 @@
     <!-- end of pricing -->
 
 
-    <!-- Testimonials -->
+    {{-- <!-- Testimonials -->
     <div class="slider-2">
         <div class="container">
             <div class="row">
@@ -600,7 +576,7 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of slider-2 -->
-    <!-- end of testimonials -->
+    <!-- end of testimonials --> --}}
 
 
     <!-- Newsletter -->
@@ -609,22 +585,19 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-container">
-                        <div class="above-heading">NEWSLETTER</div>
-                        <h2>Stay Updated With The Latest News To Get More Qualified Leads</h2>
+                        <div class="above-heading">NOTÍCIAS</div>
+                        <h2>Fique Atualizado Com as Últimas Notícias Enviados no Seu Email</h2>
 
                         <!-- Newsletter Form -->
-                        <form id="newsletterForm" data-toggle="validator" data-focus="false">
+                        <form method="POST" action="{{ route('newsletter.register') }}" id="newsletterForm" data-toggle="validator" data-focus="false">
+                            @csrf
                             <div class="form-group">
                                 <input type="email" class="form-control-input" id="nemail" required>
                                 <label class="label-control" for="nemail">Email</label>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="form-group checkbox">
-                                <input type="checkbox" id="nterms" value="Agreed-to-Terms" required>I've read and agree to Tivo's written <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
-                                <div class="help-block with-errors"></div>
-                            </div>
                             <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">SUBSCRIBE</button>
+                                <button type="submit" class="form-control-submit-button">ENVIAR</button>
                             </div>
                             <div class="form-message">
                                 <div id="nmsgSubmit" class="h3 text-center hidden"></div>
