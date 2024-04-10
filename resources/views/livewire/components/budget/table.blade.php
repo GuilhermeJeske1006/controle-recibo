@@ -88,4 +88,21 @@
         {{ $this->budgets->links('pagination::tailwind') }}
 
     </div>
+    <style>
+
+        @media screen and (max-width: 768px){
+                .hidden-mobile{
+                    display: none;
+                }
+                
+            }
+        
+            @media screen and (min-width: 768px){
+                .hidden-desktop{
+                    display: none;
+                }
+            }
+        </style>
 </div>
+
+

@@ -18,7 +18,15 @@
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Tivo - SaaS App HTML Landing Page Template</title>
+    <title>ControlGJ - Automatize os Orçamentos e Recibos</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ asset('assets/images/favicon/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('assets/images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -28,8 +36,6 @@
 	<link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet">
 	<link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
 	
-	<!-- Favicon  -->
-    <link rel="icon" href="{{ asset('assets/images/favicon.png') }}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
