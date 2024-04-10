@@ -52,7 +52,7 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="{{ route('index') }}"><img src="{{ asset('assets/images/logo.svg') }}" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="{{ route('index') }}"><img class=" img-fluid" src="{{ asset('../assets/images/logo_controlGJ-removebg-preview.png') }}" alt="alternative"></a> 
             
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">

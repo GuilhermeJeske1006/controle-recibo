@@ -9,25 +9,36 @@ use Livewire\Component;
 class Form extends Component
 {
     #[Validate('required')]
-    public $client;
+    public string $client = '';
 
-    public $cnpj_budget;
-
-    #[Validate('required')]
-    public $value_budget;
-
-    public $date_budget;
+    public $cnpj_budget = '';
 
     #[Validate('required')]
-    public $email_client;
+    public $value_budget = '';
 
-    public $phone_client;
+    public $date_budget = '';
 
-    public $description;
+    #[Validate('required')]
+    public $email_client = '';
 
-    public $reference;
+    public $phone_client = '';
 
-    public $budgets;
+    public $description = '';
+
+    public $reference = '';
+
+    public $budgets = [];
+
+
+    public $valueCliente = '';
+    public $valueCnpj = '';
+    public $valueValue = '';
+    public $valueDate = '';
+    public $valueEmail = '';
+    public $valuePhone = '';
+    public $valueDescription = '';
+    public $valueReference = ''; 
+
 
     public function submit()
     {
@@ -36,7 +47,7 @@ class Form extends Component
 
             Budget::create([
                 'client'       => $this->client,
-                'cnpj_budget'  => $this->cnpj_budget,
+                'cnpj_client'  => $this->cnpj_budget,
                 'value_budget' => $this->value_budget,
                 'date_budget'  => $this->date_budget,
                 'email_client' => $this->email_client,
@@ -67,14 +78,25 @@ class Form extends Component
 
     public function receive($budget)
     {
-        $this->client       = $budget['client'];
-        $this->cnpj_budget  = $budget['cnpj_budget'];
+        $this->client = $budget['client'];
+        $this->cnpj_budget = $budget['cnpj_client'];
         $this->value_budget = $budget['value_budget'];
-        $this->date_budget  = $budget['date_budget'];
+        $this->date_budget = $budget['date_budget'];
         $this->email_client = $budget['email_client'];
         $this->phone_client = $budget['phone_client'];
-        $this->description  = $budget['description'];
-        $this->reference    = $budget['reference'];
+        $this->description = $budget['description'];
+        $this->reference = $budget['reference'];
+        
+        
+        $this->valueCliente = $budget['client'];
+        $this->valueCnpj = $budget['cnpj_client'];
+        $this->valueValue = $budget['value_budget'];
+        $this->valueDate = $budget['date_budget'];
+        $this->valueEmail = $budget['email_client'];
+        $this->valuePhone = $budget['phone_client'];
+        $this->valueDescription = $budget['description'];
+        $this->valueReference = $budget['reference'];
+
     }
 
     public function render()

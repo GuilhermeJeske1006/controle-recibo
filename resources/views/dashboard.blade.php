@@ -13,7 +13,7 @@
                     <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                         Seus Recibos
                     </h2>
-                   <livewire:table />
+                   <livewire:components.receipt.table />
                 </div>
             </div>
         </div>

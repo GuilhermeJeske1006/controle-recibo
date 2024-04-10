@@ -50,6 +50,7 @@ Route::middleware(['auth', 'subscribed', 'verified'])->group(function () {
     Route::get('/budget/checkout', CheckoutBudget::class)->name('budget.checkout');
     Route::get('/budget/download', BudgetDownloadController::class)->name('budget.download');
     Route::get('/budget/detail/{budget}', BudgetDetailController::class)->name('budget.detail');
+
 });
 
 require __DIR__ . '/auth.php';
