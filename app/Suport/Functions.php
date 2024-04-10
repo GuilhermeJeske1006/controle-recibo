@@ -116,3 +116,22 @@ function formatExtension($valor = 0)
 
     return $rt ? $rt : 'zero';
 }
+
+function limit_words($texto, $limite)
+{
+    // Explode o texto em um array de palavras
+    $palavras = explode(" ", $texto);
+
+    // Se o número de palavras for menor ou igual ao limite, retorna o texto original
+    if (count($palavras) <= $limite) {
+        return $texto;
+    }
+
+    // Caso contrário, reune as palavras até atingir o limite
+    $texto_limitado = implode(" ", array_slice($palavras, 0, $limite));
+
+    // Adiciona reticências ao final do texto
+    $texto_limitado .= "...";
+
+    return $texto_limitado;
+}

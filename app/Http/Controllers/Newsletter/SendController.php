@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Newsletter;
 
 use App\Http\Controllers\Controller;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 
 class SendController extends Controller
@@ -15,9 +16,10 @@ class SendController extends Controller
 
         $email = $request->email;
 
-        // Send email to $email
-        // ...
+        Newsletter::create([
+            'email_user' => $email,
+        ]);
 
-        return redirect()->back()->with('message', 'Email sent!');
+        return redirect()->back()->with('message', 'Email armazenado!');
     }
 }

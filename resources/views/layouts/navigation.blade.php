@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 p-2.5 dark:text-gray-200" />
                     </a>
                 </div>
 
@@ -51,6 +51,11 @@
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Perfil') }}
                         </x-dropdown-link>
+                        @if (user()->is_admin)
+                        <x-dropdown-link :href="route('signature.register')">
+                            {{ __('Dados da Assinatura') }}
+                        </x-dropdown-link>
+                        @endif
                         @if (user()->is_admin)
                         <x-dropdown-link :href="route('company.edit')">
                             {{ __('Editar empresa') }}
@@ -121,6 +126,11 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
+                @if (user()->is_admin)
+                <x-responsive-nav-link :href="route('signature.register')">
+                    {{ __('Dados da Assinatura') }}
+                </x-responsive-nav-link>
+                @endif
                 @if (user()->is_admin)
                 <x-responsive-nav-link :href="route('company.edit')">
                     {{ __('Editar empresa') }}

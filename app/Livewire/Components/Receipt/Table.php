@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Components\Receipt;
 
 use App\Models\Receipt;
 use Livewire\Attributes\Computed;
@@ -43,9 +43,8 @@ class Table extends Component
     {
         $this->resetPage();
     }
-
     public function render()
     {
-        return view('livewire.table');
+        return view('livewire.components.receipt.table');
     }
 }
