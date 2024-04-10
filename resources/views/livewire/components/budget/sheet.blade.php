@@ -5,9 +5,9 @@
     background-position: center;
     background-repeat: no-repeat;
 "
-        class=" p-20 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        class=" sm-p-10 p-20 sheet bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8  mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8  mb-16 hidden-mobile">
             <div>
                 <img class="h-auto  rounded-lg" style="max-width: 30%;"
                     src="{{ $budget->company->photo }}" alt="">
@@ -84,5 +84,12 @@
     </a>
 
 
-
+<style>
+    @media screen and (max-width: 768px){
+                .sm-p-10{
+                    padding: 10px
+                }
+                
+            }
+</style>
 </div>
