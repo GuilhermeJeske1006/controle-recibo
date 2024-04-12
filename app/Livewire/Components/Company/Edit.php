@@ -76,13 +76,13 @@ class Edit extends Component
     public function edit()
     {
         if ($this->photo != null) {
-            $this->photo = $this->photo->store('photos', 's3');
+            $this->photo = $this->photo->storePublicly('photos', 's3', 'public');
         } else {
             $this->photo = $this->company->photo;
         }
 
         if ($this->marca_dagua != null) {
-            $this->marca_dagua = $this->marca_dagua->store('marca_dagua', 's3');
+            $this->marca_dagua = $this->marca_dagua->storePublicly('marca_dagua', 's3', 'public');
         } else {
             $this->marca_dagua = $this->company->marca_dagua;
         }

@@ -248,9 +248,6 @@
     <!-- end of details --> 
 
 
-
-
-
     {{-- <div id="pricing" class="cards-2">
         <div class="container">
             <div class="row">
@@ -328,9 +325,6 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div>  --}}
-
-
-
 
     <!-- Newsletter -->
     <div class="form">
