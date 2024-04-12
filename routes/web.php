@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\{Auth, Route};
 */
 
 Route::get('/', function () {
-    // Auth::loginUsingId(2);
+     Auth::loginUsingId(2);
 
     return view('index');
 })->name('index');
