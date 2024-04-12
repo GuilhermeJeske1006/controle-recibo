@@ -101,13 +101,13 @@
                     <!-- Tabs Links -->
                     <ul class="nav nav-tabs" id="argoTabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-list"></i>List Builder</a>
+                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-list"></i>Recibos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-envelope-open-text"></i>Campaigns</a>
+                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-envelope-open-text"></i>Orçamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-chart-bar"></i>Analytics</a>
+                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-chart-bar"></i>Emissão de PDF</a>
                         </li>
                     </ul>
                     <!-- end of tabs links -->
@@ -120,25 +120,22 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="{{ asset('assets/images/features-1.png') }}" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('assets/images/receipt_light.png') }}" style="border-radius: 5%" alt="alternative">
                                     </div> <!-- end of image-container -->
                                 </div> <!-- end of col -->
                                 <div class="col-lg-6">
                                     <div class="text-container">
-                                        <h3>List Building Is Easier Than Ever</h3>
-                                        <p>It's very easy to start using Tivo. You just need to fill out and submit the <a class="blue page-scroll" href="sign-up.html">Sign Up Form</a> and you will receive access to the app and all of its features in no more than 24h.</p>
+                                        <h3>Criação de Recibos</h3>
+                                        <p>Otimize sua gestão financeira com nosso novo Módulo de Criação de Recibos. Este recurso fácil de usar permite que você gere recibos de forma rápida e precisa, simplificando suas transações financeiras e fornecendo um registro claro de pagamentos.</p>
                                         <ul class="list-unstyled li-space-lg">
                                             <li class="media">
                                                 <i class="fas fa-square"></i>
-                                                <div class="media-body">Create and embed on websites newsletter sign up forms</div>
+                                                <div class="media-body">Personalização Flexível: Personalize seus recibos com facilidade, adicionando detalhes específicos do cliente, informações de pagamento e até mesmo o logotipo da sua empresa para uma apresentação personalizada.</div>
                                             </li>
+
                                             <li class="media">
                                                 <i class="fas fa-square"></i>
-                                                <div class="media-body">Manage forms and landing pages for your services</div>
-                                            </li>
-                                            <li class="media">
-                                                <i class="fas fa-square"></i>
-                                                <div class="media-body">Add and remove subscribers using the control panel</div>
+                                                <div class="media-body">Segurança dos Dados: Garanta a segurança das informações financeiras da sua empresa com recursos avançados de proteção de dados, mantendo seus registros financeiros confidenciais e seguros.</div>
                                             </li>
                                         </ul>
                                         <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a>
@@ -158,21 +155,18 @@
                                 </div> <!-- end of col -->
                                 <div class="col-lg-6">
                                     <div class="text-container">
-                                        <h3>Campaigns Monitoring Tools</h3>
-                                        <p>Campaigns monitoring is a feature we've developed since the beginning because it's at the core of Tivo and basically to any marketing activity focused on results.</p>
+                                        <h3>Criação de Orçamentos</h3>
+                                        <p>Facilite a elaboração de orçamentos para sua empresa com o nosso novo Módulo de Criação de Orçamentos. Este recurso intuitivo permite que você crie orçamentos detalhados de forma rápida e precisa, simplificando o processo de estimativa de custos e fornecendo uma base sólida para suas transações comerciais.</p>
                                         <ul class="list-unstyled li-space-lg">
                                             <li class="media">
                                                 <i class="fas fa-square"></i>
-                                                <div class="media-body">Easily plan campaigns and schedule their starting date</div>
+                                                <div class="media-body">Controle Financeiro: Mantenha um controle preciso dos custos e receitas esperados com orçamentos detalhados que servem como referência durante todo o ciclo do projeto.</div>
                                             </li>
                                             <li class="media">
                                                 <i class="fas fa-square"></i>
-                                                <div class="media-body">Start campaigns and follow their evolution closely</div>
+                                                <div class="media-body">Customização Flexível: Personalize seus orçamentos de acordo com as necessidades específicas de cada cliente, adicionando detalhes personalizados e adaptando-se a diferentes projetos e requisitos.</div>
                                             </li>
-                                            <li class="media">
-                                                <i class="fas fa-square"></i>
-                                                <div class="media-body">Evaluate campaign results and optimize future actions</div>
-                                            </li>
+
                                         </ul>
                                         <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">LIGHTBOX</a>
                                     </div> <!-- end of text-container -->
@@ -191,20 +185,16 @@
                                 </div> <!-- end of col -->
                                 <div class="col-lg-6">
                                     <div class="text-container">
-                                        <h3>Analytics Control Panel</h3>
-                                        <p>Analytics control  panel is important for every marketing team so it's beed implemented from the begging and designed to produce reports based on very little input information.</p>
+                                        <h3>Transforme Orçamentos e Recibos em Documentos Profissionais com a Geração de PDF</h3>
+                                        <p>Aprimore a apresentação e profissionalismo dos seus orçamentos e recibos com nossa nova funcionalidade de Geração de PDF. Com este recurso, você pode facilmente transformar seus orçamentos e recibos em documentos bem formatados e de alta qualidade, prontos para impressão ou envio eletrônico aos seus clientes.</p>
                                         <ul class="list-unstyled li-space-lg">
                                             <li class="media">
                                                 <i class="fas fa-square"></i>
-                                                <div class="media-body">If you set it up correctly you will get acces to great intel</div>
+                                                <div class="media-body">Aparência Profissional: Transforme seus orçamentos e recibos em documentos profissionais com formatação precisa e visualmente atraente, transmitindo uma imagem confiável e competente para seus clientes.</div>
                                             </li>
                                             <li class="media">
                                                 <i class="fas fa-square"></i>
-                                                <div class="media-body">Easy to integrate in your websites and landing pages</div>
-                                            </li>
-                                            <li class="media">
-                                                <i class="fas fa-square"></i>
-                                                <div class="media-body">The generated reports are important for your strategy</div>
+                                                <div class="media-body">Conveniência e Acessibilidade: Acesse seus orçamentos e recibos em formato PDF a partir de qualquer dispositivo, permitindo que você os visualize, compartilhe e imprima onde quer que esteja.</div>
                                             </li>
                                         </ul>
                                         <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-3">LIGHTBOX</a>
@@ -237,14 +227,14 @@
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Understand customers and meet their requirements</div>
+                                <div class="media-body">Pagamento 100% seguro</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Targeted client base with Tivo's efficient technology</div>
+                                <div class="media-body">Suporte 24h</div>
                             </li>
                         </ul>
-                        <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
+                        <a class="btn-solid-reg page-scroll" href="{{ route('signature.register') }}">CADASTRAR-ME</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
