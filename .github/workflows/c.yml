@@ -1,20 +1,38 @@
-on: 
+on:
   push:
     branches:
       - main
-name: 🚀 Deploy website on push
+      - develop
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  web-deploy-main:
+    name: 🎉 Deploy to zebrinha on push to main
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
     
-    - name: 📂 Sync files
+    - name: 📂 Sync files to zebrinha
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.ftp_host }}
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
         server-dir: /zebrinha.gjdesenvolvimento.com.br/
+
+  web-deploy-develop:
+    name: 🎉 Deploy to controlgj on push to develop
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files to controlgj
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.ftp_host }}
+        username: ${{ secrets.ftp_user }}
+        password: ${{ secrets.ftp_password }}
+        server-dir: /controlgj.com.br/
