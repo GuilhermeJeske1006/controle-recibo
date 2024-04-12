@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="Diga adeus às complicações na gestão financeira da sua empresa. Com o nosso Sistema de Recibos e Orçamentos, você pode simplificar todo o processo de criação e gerenciamento de recibos e orçamentos de forma eficiente e intuitiva.">
+    <meta name="author" content="GJ desenvolvimento">
+    <meta name="keywords" content="sistema, orçamento, recibo, financeiro, gestão, empresa, controle, automatização, simplificação, eficiência, intuitivo">
+    <meta name="robots" content="index, follow">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
     <title>ControlGJ - Automatize os Orçamentos e Recibos</title>
@@ -78,10 +72,10 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#details">DETALHES</a>
                     </li>
-
+{{-- 
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#pricing">PRECIFICAÇÃO</a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <span class="nav-item">
                     <a class="btn-outline-sm" href="{{ route('login') }}">Entrar</a>

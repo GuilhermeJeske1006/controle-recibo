@@ -15,7 +15,7 @@
                     <div class="col-lg-6 col-xl-7">
                         <div class="image-container">
                             <div class="img-wrapper">
-                                <img class="img-fluid" src="{{ asset('assets/images/header-software-app.png') }}" alt="alternative">
+                                <img class="img-fluid" src="{{ asset('assets/images/undraw_experience_design_re_dmqq.svg') }}" alt="alternative">
                             </div> <!-- end of img-wrapper -->
                         </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
@@ -72,8 +72,8 @@
                             <img class="img-fluid" src="{{ asset('assets/images/description-3.png') }}" alt="alternative">
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Interface Intuitiva</h4>
-                            <p>Acesse seus recibos e orçamentos de qualquer lugar, a qualquer momento, através da nuvem, garantindo flexibilidade e conveniência.</p>
+                            <h4 class="card-title">Segurança dos Dados</h4>
+                            <p>Proteja as informações financeiras da sua empresa com recursos avançados de segurança, garantindo a confidencialidade e integridade dos seus dados.</p>
                         </div>
                     </div>
                     <!-- end of card -->
@@ -101,13 +101,13 @@
                     <!-- Tabs Links -->
                     <ul class="nav nav-tabs" id="argoTabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-list"></i>Recibos</a>
+                            <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-receipt"></i>Recibos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-envelope-open-text"></i>Orçamentos</a>
+                            <a class="nav-link" id="nav-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false"><i class="fas fa-newspaper"></i>Orçamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-chart-bar"></i>Emissão de PDF</a>
+                            <a class="nav-link" id="nav-tab-3" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false"><i class="fas fa-file-pdf"></i>Emissão de PDF</a>
                         </li>
                     </ul>
                     <!-- end of tabs links -->
@@ -120,7 +120,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="{{ asset('assets/images/receipt_light.png') }}" style="border-radius: 5%" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('assets/images/undraw_receipt_re_fre3.svg') }}" style="border-radius: 5%" alt="alternative">
                                     </div> <!-- end of image-container -->
                                 </div> <!-- end of col -->
                                 <div class="col-lg-6">
@@ -138,7 +138,7 @@
                                                 <div class="media-body">Segurança dos Dados: Garanta a segurança das informações financeiras da sua empresa com recursos avançados de proteção de dados, mantendo seus registros financeiros confidenciais e seguros.</div>
                                             </li>
                                         </ul>
-                                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a>
+                                        <a class="btn-solid-reg popup-with-move-anim" href="{{ route('signature.register') }}">CADASTRAR-ME</a>
                                     </div> <!-- end of text-container -->
                                 </div> <!-- end of col -->
                             </div> <!-- end of row -->
@@ -150,7 +150,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="{{ asset('assets/images/features-2.png') }}" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('assets/images/undraw_pending_approval_xuu9.svg') }}" style="border-radius: 5%" alt="alternative">
                                     </div> <!-- end of image-container -->
                                 </div> <!-- end of col -->
                                 <div class="col-lg-6">
@@ -168,7 +168,7 @@
                                             </li>
 
                                         </ul>
-                                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-2">LIGHTBOX</a>
+                                        <a class="btn-solid-reg popup-with-move-anim" href="{{ route('signature.register') }}">CADASTRAR-ME</a>
                                     </div> <!-- end of text-container -->
                                 </div> <!-- end of col -->
                             </div> <!-- end of row -->
@@ -180,7 +180,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="image-container">
-                                        <img class="img-fluid" src="{{ asset('assets/images/features-3.png') }}" alt="alternative">
+                                        <img class="img-fluid" src="{{ asset('assets/images/undraw_documents_re_isxv.svg') }}" style="border-radius: 5%" alt="alternative">
                                     </div> <!-- end of image-container -->
                                 </div> <!-- end of col -->
                                 <div class="col-lg-6">
@@ -197,7 +197,7 @@
                                                 <div class="media-body">Conveniência e Acessibilidade: Acesse seus orçamentos e recibos em formato PDF a partir de qualquer dispositivo, permitindo que você os visualize, compartilhe e imprima onde quer que esteja.</div>
                                             </li>
                                         </ul>
-                                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-3">LIGHTBOX</a>
+                                        <a class="btn-solid-reg popup-with-move-anim" href="{{ route('signature.register') }}">CADASTRAR-ME</a>
                                     </div> <!-- end of text-container -->
                                 </div> <!-- end of col -->
                             </div> <!-- end of row -->
@@ -239,7 +239,7 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="{{ asset('assets/images/details.png') }}" alt="alternative">
+                        <img class="img-fluid" style="border-radius: 5%" src="{{ asset('assets/images/undraw_terms_re_6ak4.svg') }}" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -251,8 +251,7 @@
 
 
 
-    <!-- Pricing -->
-    <div id="pricing" class="cards-2">
+    {{-- <div id="pricing" class="cards-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -328,7 +327,7 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
+    </div>  --}}
 
 
 
