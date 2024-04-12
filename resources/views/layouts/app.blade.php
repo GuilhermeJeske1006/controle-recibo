@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+      <!-- SEO Meta Tags -->
+      <meta name="description" content="Diga adeus às complicações na gestão financeira da sua empresa. Com o nosso Sistema de Recibos e Orçamentos, você pode simplificar todo o processo de criação e gerenciamento de recibos e orçamentos de forma eficiente e intuitiva.">
+      <meta name="author" content="GJ desenvolvimento">
+      <meta name="keywords" content="sistema, orçamento, recibo, financeiro, gestão, empresa, controle, automatização, simplificação, eficiência, intuitivo">
+      <meta name="robots" content="index, follow">
+  
+  
+      <!-- Website Title -->
+      <title>ControlGJ - Automatize os Orçamentos e Recibos</title>
+  
+      <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon/apple-touch-icon.png') }}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png')}}">
+      <link rel="manifest" href="{{ asset('assets/images/favicon/site.webmanifest') }}">
+      <link rel="mask-icon" href="{{ asset('assets/images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
