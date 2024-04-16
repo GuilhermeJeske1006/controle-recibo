@@ -19,8 +19,14 @@ class DownloadController extends Controller
             ->load([
                 'company',
             ]);
-        $budget->company->photo       = Storage::url($budget->company->photo);
-        $budget->company->marca_dagua = Storage::url($budget->company->marca_dagua);
+
+        if($budget->company->photo) {
+            $budget->company->photo = Storage::url($budget->company->photo);
+        }
+
+        if($budget->company->marca_dagua) {
+            $budget->company->marca_dagua = Storage::url($budget->company->marca_dagua);
+        }
 
         $pdf = Pdf::loadView('pdf.budget', [
             'budget' => $budget,
