@@ -21,7 +21,7 @@ class SubscribeController extends Controller
         Auth::login($user);
 
         return $user
-            ->newSubscription('default', 'price_1Orpk5ATa69SphCfHILKmqmK')
+            ->newSubscription('default', env('STRIPE_PRICE_ID'))
             ->checkout()
             ->redirect();
 
