@@ -5,9 +5,9 @@ on:
       - develop
 
 jobs:
-  web-deploy-main:
-    name: 🎉 Deploy to zebrinha on push to main
-    if: github.ref == 'refs/heads/main'
+  web-deploy-develop:
+    name: 🎉 Deploy to zebrinha on push to develop
+    if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
@@ -21,9 +21,9 @@ jobs:
         password: ${{ secrets.ftp_password }}
         server-dir: /zebrinha.gjdesenvolvimento.com.br/
 
-  web-deploy-develop:
-    name: 🎉 Deploy to controlgj on push to develop
-    if: github.ref == 'refs/heads/develop'
+  web-deploy-main:
+    name: 🎉 Deploy to controlgj on push to main
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code

@@ -22,7 +22,9 @@ class DetailController extends Controller
                     'company',
                 ]);
 
-        $receipt->company->photo = Storage::url($receipt->company->photo);
+        if($receipt->company->photo) {
+            $receipt->company->photo = Storage::url($receipt->company->photo);
+        }
 
         return view('receipt.details', compact('receipt'));
     }

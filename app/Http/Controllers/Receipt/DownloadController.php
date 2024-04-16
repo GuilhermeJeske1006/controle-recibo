@@ -22,7 +22,10 @@ class DownloadController extends Controller
                 'pixs',
                 'company',
             ]);
-        $receipt->company->photo = Storage::url($receipt->company->photo);
+
+        if($receipt->company->photo) {
+            $receipt->company->photo = Storage::url($receipt->company->photo);
+        }
 
         $pdf = Pdf::loadView('pdf.receipt', [
             'receipt' => $receipt,
