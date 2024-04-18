@@ -125,7 +125,7 @@ class Form extends Component
             return redirect()->route('subscribe', ['user' => $user->id]);
 
         } catch (\Exception $e) {
-            flash()->addError($e->getMessage());
+            flash()->addError('Erro ao cadastrar empresa');
         }
 
     }
