@@ -2,24 +2,25 @@
 
 namespace App\Notifications;
 
-use App\Models\Budget;
+use App\Models\Receipt;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class sendBudget extends Notification
+class sendReceipt extends Notification
 {
     use Queueable;
-
-    /** @var Budget */
-    public $budget;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct(Budget $budget)
-    {
-        $this->budget = $budget;
+    /** @var Receipt */
+    public $receipt;
+
+    public function __construct(
+        Receipt $receipt
+    ) {
+        $this->receipt = $receipt;
     }
 
     /**
@@ -38,9 +39,9 @@ class sendBudget extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage())
-                    ->line('Você recebeu um orçamento.')
-                    ->action('Clique para ver', route('budget.download', ['budget' => $this->budget->id]))
-                    ->line('Obrigado por usar nosso aplicativo!');
+                    ->line('Olá, você recebeu um novo recibo.')
+                    ->action('Notification Action', route('receipt.download', ['receipt' => $this->receipt->id]))
+                    ->line('Thank you for using our application!');
     }
 
     /**
