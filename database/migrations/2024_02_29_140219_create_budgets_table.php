@@ -20,7 +20,7 @@ return new class () extends Migration {
             $table->string('reference')->nullable();
             $table->string('status')->default('open');
             $table->dateTime('date_budget')->nullable();
-            $table->float('value_budget')->nullable();
+            $table->decimal('value_budget', 10, 2)->nullable();
 
             $table->unsignedBigInteger('company_id')->nullable();
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');

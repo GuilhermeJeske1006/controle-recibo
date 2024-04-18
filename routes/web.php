@@ -28,6 +28,8 @@ Route::get('/signature/register', SignatureRegisterController::class)->name('sig
 
 Route::get('/subscribe', SubscribeController::class)->name('subscribe');
 Route::post('/newsletter/register', SendController::class)->name('newsletter.register');
+Route::get('/budget/download', BudgetDownloadController::class)->name('budget.download');
+Route::get('/receipt/download', DownloadController::class)->name('receipt.download');
 
 Route::middleware(['auth', 'subscribed', 'verified'])->group(function () {
     Route::get('/dashboard', function () {return view('dashboard');})->name('home');
@@ -42,13 +44,11 @@ Route::middleware(['auth', 'subscribed', 'verified'])->group(function () {
     Route::patch('/company/edit', [CompanyController::class, 'update'])->name('company.update');
 
     Route::get('/receipt/detail/{receipt}', DetailController::class)->name('receipt.detail');
-    Route::get('/receipt/download', DownloadController::class)->name('receipt.download');
     Route::get('/register/receipt', [ReceiptController::class, 'index'])->name('register.receipt');
     Route::get('/receipt/checkout', CheckoutController::class)->name('receipt.checkout');
 
     Route::get('/budget/register', [BudgetController::class, 'index'])->name('budget.register');
     Route::get('/budget/checkout', CheckoutBudget::class)->name('budget.checkout');
-    Route::get('/budget/download', BudgetDownloadController::class)->name('budget.download');
     Route::get('/budget/detail/{budget}', BudgetDetailController::class)->name('budget.detail');
 
 });

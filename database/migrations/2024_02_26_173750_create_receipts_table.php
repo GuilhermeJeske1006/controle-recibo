@@ -12,7 +12,7 @@ return new class () extends Migration {
     {
         Schema::create('receipts', function (Blueprint $table) {
             $table->id();
-            $table->float('value');
+            $table->decimal('value', 10, 2);
             $table->string('payer');
             $table->string('cpf_payer')->nullable();
             $table->string('referent');
