@@ -56,6 +56,7 @@ class Edit extends Component
 
     public function mount()
     {
+
         $this->company      = Company::find(user()->company_id);
         $this->name_company = $this->company->name_company;
         $this->instagram    = $this->company->instagram;

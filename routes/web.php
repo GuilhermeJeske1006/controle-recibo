@@ -42,7 +42,7 @@ Route::middleware(['auth', 'subscribed', 'verified'])->group(function () {
     Route::get('/company/register', [CompanyController::class, 'create'])->name('company.create');
     Route::post('/company/register', [CompanyController::class, 'store'])->name('company.store');
     Route::get('/company/edit', [CompanyController::class, 'edit'])->name('company.edit');
-    Route::patch('/company/edit', [CompanyController::class, 'update'])->name('company.update');
+    Route::put('/company/update/{company}', [CompanyController::class, 'update'])->name('company.update');
 
     Route::get('/receipt/detail/{receipt}', DetailController::class)->name('receipt.detail');
     Route::get('/register/receipt', [ReceiptController::class, 'index'])->name('register.receipt');
