@@ -129,7 +129,6 @@ class Form extends Component
             DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
-            dd($e->getMessage());
             flash()->addError('Erro ao cadastrar empresa');
         }
 
