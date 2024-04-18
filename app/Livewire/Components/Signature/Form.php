@@ -3,7 +3,7 @@
 namespace App\Livewire\Components\Signature;
 
 use App\Models\{Adress, Company, User};
-use Illuminate\Support\Facades\{Hash, Http};
+use Illuminate\Support\Facades\{DB, Hash, Http};
 use Livewire\Attributes\Validate;
 use Livewire\{Component, WithFileUploads};
 
@@ -76,6 +76,8 @@ class Form extends Component
 
     public function submit()
     {
+        DB::beginTransaction();
+
         $this->validate();
 
         if($this->photo != null) {
@@ -124,7 +126,10 @@ class Form extends Component
 
             return redirect()->route('subscribe', ['user' => $user->id]);
 
+            DB::commit();
         } catch (\Exception $e) {
+            DB::rollBack();
+            dd($e->getMessage());
             flash()->addError('Erro ao cadastrar empresa');
         }
 
