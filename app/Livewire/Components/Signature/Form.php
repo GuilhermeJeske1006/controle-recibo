@@ -76,7 +76,6 @@ class Form extends Component
 
     public function submit()
     {
-        DB::beginTransaction();
 
         $this->validate();
 
@@ -89,6 +88,8 @@ class Form extends Component
         }
 
         try {
+            DB::beginTransaction();
+
             $adress = Adress::create([
                 'street'       => $this->street,
                 'number'       => $this->number,
@@ -122,18 +123,48 @@ class Form extends Component
                 'is_admin'   => true,
             ]);
 
+            DB::commit();
+            $this->resetForm();
+
             flash()->addSuccess('Empresa cadastrada com sucesso');
 
-            return redirect()->route('subscribe', ['user' => $user->id]);
+            if($user) {
+                return redirect()->route('subscribe', ['user' => $user->id]);
+            }
 
-            DB::commit();
+            return redirect()->route('signature.register');
+
         } catch (\Exception $e) {
             DB::rollBack();
-            dd($e->getMessage());
             flash()->addError('Erro ao cadastrar empresa');
         }
 
     }
+
+    public function resetForm()
+    {
+        $this->name_company     = '';
+        $this->cnpj             = '';
+        $this->email            = '';
+        $this->phone_sender     = '';
+        $this->description      = '';
+        $this->photo            = '';
+        $this->street           = '';
+        $this->number           = '';
+        $this->complement       = '';
+        $this->cep              = '';
+        $this->neighborhood     = '';
+        $this->city             = '';
+        $this->state            = '';
+        $this->instagram        = '';
+        $this->slogan           = '';
+        $this->marca_dagua      = '';
+        $this->name_user        = '';
+        $this->email_user       = '';
+        $this->password         = '';
+        $this->confirm_password = '';
+    }
+
     public function render()
     {
         return view('livewire.components.signature.form');

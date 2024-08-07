@@ -6,7 +6,8 @@
                 <div class="bounce2"></div>
                 <div class="bounce3"></div>
             </div>
-        </div>        </div>
+        </div>
+        </div>
     <div class="form-container">
         
         <form wire:submit="submit" id="privacyForm" data-toggle="validator" data-focus="false">
@@ -308,7 +309,4 @@
 
     </form>
 </div>
-
-
-
 </div>

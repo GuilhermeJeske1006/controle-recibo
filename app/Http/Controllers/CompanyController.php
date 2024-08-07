@@ -106,7 +106,6 @@ class CompanyController extends Controller
             return back()->with('success', 'Empresa atualizada com sucesso!');
         } catch (\Throwable $th) {
             DB::rollBack();
-            dd($th->getMessage());
 
             return back()->with('error', 'Erro ao atualizar empresa!');
         }
