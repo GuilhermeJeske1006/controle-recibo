@@ -12,6 +12,9 @@ class SubscribeController extends Controller
     {
         $user = User::find($request->user);
 
+        if(!$user) {
+            return redirect()->route('signature.register');
+        }
         $user->createOrGetStripeCustomer();
 
         if($user->subscribed('default')) {
