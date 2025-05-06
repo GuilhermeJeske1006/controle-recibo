@@ -23,11 +23,11 @@ class Sheet extends Component
                     ->latest()
                     ->first();
 
-                if($this->budget->company->photo) {
+                if ($this->budget->company->photo) {
                     $this->budget->company->photo = Storage::url($this->budget->company->photo);
                 }
 
-                if($this->budget->company->marca_dagua) {
+                if ($this->budget->company->marca_dagua) {
                     $this->budget->company->marca_dagua = Storage::url($this->budget->company->marca_dagua);
                 }
 

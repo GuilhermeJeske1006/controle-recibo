@@ -8,9 +8,9 @@ class RegisterController extends Controller
 {
     public function __invoke()
     {
-        if(user() != null) {
+        if (user() != null) {
 
-            if(user()->subscribed('default')) {
+            if (user()->subscribed('default')) {
                 return user()->redirectToBillingPortal();
             }
 

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Receipt;
 use App\Http\Controllers\Controller;
 use App\Models\Receipt;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class DetailController extends Controller
 {
@@ -22,8 +21,8 @@ class DetailController extends Controller
                     'company',
                 ]);
 
-        if($receipt->company->photo) {
-            $receipt->company->photo = Storage::url($receipt->company->photo);
+        if ($receipt->company->photo) {
+            $receipt->company->photo = env('APP_URL') . 'storage/' . $receipt->company->photo;
         }
 
         return view('receipt.details', compact('receipt'));

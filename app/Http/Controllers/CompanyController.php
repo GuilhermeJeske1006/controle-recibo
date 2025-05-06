@@ -114,10 +114,10 @@ class CompanyController extends Controller
     private function storeFile($file, $directory, $existingFile = null)
     {
         if ($file) {
-            $path = Storage::disk('s3')->put($directory, $file, 'public');
+            $path = Storage::disk('public')->put($directory, $file);
 
             if ($existingFile) {
-                Storage::disk('s3')->delete($existingFile);
+                Storage::disk('public')->delete($existingFile);
             }
 
             return $path;

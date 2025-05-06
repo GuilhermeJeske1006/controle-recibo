@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Budget;
 use App\Http\Controllers\Controller;
 use App\Models\Budget;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class DetailController extends Controller
 {
@@ -19,12 +18,12 @@ class DetailController extends Controller
                 'company',
             ]);
 
-        if($budget->company->photo) {
-            $budget->company->photo = Storage::url($budget->company->photo);
+        if ($budget->company->photo) {
+            $budget->company->photo = env('APP_URL') . 'storage/' . $budget->company->photo;
         }
 
-        if($budget->company->marca_dagua) {
-            $budget->company->marca_dagua = Storage::url($budget->company->marca_dagua);
+        if ($budget->company->marca_dagua) {
+            $budget->company->marca_dagua = env('APP_URL') . 'storage/' . $budget->company->marca_dagua;
         }
 
         return view('budget.details', compact('budget'));
