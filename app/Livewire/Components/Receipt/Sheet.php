@@ -30,7 +30,7 @@ class Sheet extends Component
                 ->latest()
                 ->first();
 
-            if($this->receipt->company->photo) {
+            if ($this->receipt->company->photo) {
                 $this->receipt->company->photo = Storage::url($this->receipt->company->photo);
             }
 

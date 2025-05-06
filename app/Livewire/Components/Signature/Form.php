@@ -79,11 +79,11 @@ class Form extends Component
 
         $this->validate();
 
-        if($this->photo != null) {
+        if ($this->photo != null) {
             $this->photo = $this->photo->store('photos', 's3');
         }
 
-        if($this->marca_dagua != null) {
+        if ($this->marca_dagua != null) {
             $this->marca_dagua = $this->marca_dagua->store('marca_dagua', 's3');
         }
 
@@ -128,7 +128,7 @@ class Form extends Component
 
             flash()->addSuccess('Empresa cadastrada com sucesso');
 
-            if($user) {
+            if ($user) {
                 return redirect()->route('subscribe', ['user' => $user->id]);
             }
 

@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\Budget\{CheckoutBudget, DetailController as BudgetDetailController, DownloadController as BudgetDownloadController, SendEmailController};
+use App\Http\Controllers\{BudgetController, CompanyController, ProfileController, ReceiptController, SubscribeController};
 use App\Http\Controllers\Newsletter\SendController;
 use App\Http\Controllers\Receipt\{CheckoutController, DetailController, DownloadController, sendEmailController as ReceiptSendEmailController};
 use App\Http\Controllers\Signature\RegisterController as SignatureRegisterController;
-use App\Http\Controllers\{BudgetController, CompanyController, ProfileController, ReceiptController, SubscribeController};
 use Illuminate\Support\Facades\{Auth, Route};
 
 /*
